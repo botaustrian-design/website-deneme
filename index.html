@@ -1,3 +1,26 @@
-<button onclick="document.body.style.background='red'">Kırmızı</button>
-<button onclick="document.body.style.background='blue'">Mavi</button>
-<button onclick="document.body.style.background='green'">Yeşil</button>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Renk Değiştirici Website</title>
+    <style>
+        body { display: grid; place-items: center; height: 100vh; margin: 0; font-family: sans-serif; transition: 0.4s; }
+        .container { text-align: center; background: rgba(255, 255, 255, 0.85); padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        button { padding: 12px 24px; margin: 5px; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; color: #fff; cursor: pointer; transition: 0.2s; }
+        button:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <div class="container" onclick="if(event.target.dataset.color) document.body.style.backgroundColor = event.target.dataset.color">
+        <h1>Bir Renk Seçin</h1>
+        <button data-color="#e74c3c" style="background:#e74c3c">Kırmızı</button>
+        <button data-color="#3498db" style="background:#3498db">Mavi</button>
+        <button data-color="#2ecc71" style="background:#2ecc71">Yeşil</button>
+        <button data-color="#f1c40f" style="background:#f1c40f; color:#333">Sarı</button>
+        <button data-color="#9b59b6" style="background:#9b59b6">Mor</button>
+        <button data-color="#ffffff" style="background:#34495e">Sıfırla</button>
+    </div>
+
+</body>
+</html>
